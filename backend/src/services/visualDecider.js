@@ -30,6 +30,7 @@ Rules:
 - Do NOT change text or timestamps
 - Set isTitle true only if it sounds like an intro or section heading
 - Output ONLY valid JSON (no markdown, no explanation)
+- Give alteast 3 isSceneChange true and apply whereever you feel its needed
 
 JSON format:
 {
@@ -84,7 +85,7 @@ function resolveAnimation(isTitle, highlights) {
 /* ------------------ PUBLIC API ------------------ */
 
 export async function applyVisualDecisions(segments) {
-    console.log("🔥 APPLY VISUAL DECISIONS RUNNING");
+  console.log("🔥 APPLY VISUAL DECISIONS RUNNING");
 
   const enriched = [];
 
@@ -92,7 +93,7 @@ export async function applyVisualDecisions(segments) {
     const segment = segments[i];
     const decision = await decideVisuals(segment, i);
 
-    // Deterministic title rule (DO NOT let AI guess this)
+    // Deterministic title rule
     const forcedTitle =
       i === 0 && (segment.end - segment.start) >= 2;
 
@@ -101,14 +102,21 @@ export async function applyVisualDecisions(segments) {
       decision.highlight || []
     );
 
+    const animation = resolveAnimation(
+      forcedTitle || decision.isTitle === true,
+      cleanedHighlights
+    );
+
+    // 🔑 NEW RULE: decide when video should animate
+    const isSceneChange =
+      forcedTitle || animation === "SLIDE_UP";
+
     enriched.push({
       ...segment,
       isTitle: forcedTitle || decision.isTitle === true,
       highlight: cleanedHighlights,
-      animation: resolveAnimation(
-        forcedTitle || decision.isTitle === true,
-        cleanedHighlights
-      )
+      animation,
+      isSceneChange, // 👈 NEW FIELD
     });
   }
 

@@ -4,227 +4,52 @@
   "editPlan": {
     "segments": [
       {
-        "text": "Hello guys, welcome to my blog",
+        "text": "Hi everyone hope your preparation is",
         "start": 0,
-        "end": 2.293333371480306,
+        "end": 2.5920001029968263,
         "isTitle": true,
-        "highlight": [
-          "welcome",
-          "blog"
-        ],
-        "animation": "SLIDE_UP"
+        "highlight": [],
+        "animation": "SLIDE_UP",
+        "isSceneChange": true
       },
       {
-        "text": "and in today's cozy blog, we",
-        "start": 2.293333371480306,
-        "end": 4.586666742960612,
+        "text": "going really well for",
+        "start": 2.5920001029968263,
+        "end": 4.320000171661377,
         "isTitle": false,
         "highlight": [],
-        "animation": "FADE"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
-        "text": "are going to explore the normal",
-        "start": 4.586666742960612,
-        "end": 6.880000114440918,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "hackathon at Scyllus Plottinger.",
-        "start": 6.880000114440918,
-        "end": 9.279999732971191,
+        "text": "scalar school of technology's entrance process",
+        "start": 4.320000171661377,
+        "end": 6.127058786504409,
         "isTitle": false,
         "highlight": [
-          "hackathon",
-          "Scyllus"
+          "scalar",
+          "technology"
         ],
-        "animation": "POP"
+        "animation": "POP",
+        "isSceneChange": false
       },
       {
-        "text": "So as the other hackathons, we",
-        "start": 9.279999732971191,
-        "end": 11.279999732971191,
+        "text": "and and the other entrance exams",
+        "start": 6.127058786504409,
+        "end": 7.934117401347441,
         "isTitle": false,
         "highlight": [],
-        "animation": "FADE"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
-        "text": "registered that hackathon at the very",
-        "start": 11.279999732971191,
-        "end": 13.279999732971191,
+        "text": "that you might be giving",
+        "start": 7.934117401347441,
+        "end": 9.4399995803833,
         "isTitle": false,
         "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "end moment when",
-        "start": 13.279999732971191,
-        "end": 14.279999732971191,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "their form was going to close",
-        "start": 14.279999732971191,
-        "end": 16.62947328467118,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "and as you can see, we",
-        "start": 16.62947328467118,
-        "end": 18.978946836371172,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "three roommates are going to the hackathon.",
-        "start": 18.978946836371172,
-        "end": 21.719999313354492,
-        "isTitle": false,
-        "highlight": [
-          "roommates",
-          "hackathon"
-        ],
-        "animation": "POP"
-      },
-      {
-        "text": "One of the roommates is in",
-        "start": 21.719999313354492,
-        "end": 23.489999771118164,
-        "isTitle": false,
-        "highlight": [
-          "roommates"
-        ],
-        "animation": "POP"
-      },
-      {
-        "text": "the washroom.",
-        "start": 23.489999771118164,
-        "end": 24.079999923706055,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "The bus deadline is at 10pm and",
-        "start": 24.079999923706055,
-        "end": 26.949999968210857,
-        "isTitle": false,
-        "highlight": [
-          "deadline",
-          "10pm"
-        ],
-        "animation": "POP"
-      },
-      {
-        "text": "it's 9.",
-        "start": 26.949999968210857,
-        "end": 27.769999980926514,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "53pm right now.",
-        "start": 27.769999980926514,
-        "end": 29,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "We have 7 minutes to board",
-        "start": 29,
-        "end": 30.824000549316406,
-        "isTitle": false,
-        "highlight": [
-          "minutes",
-          "board"
-        ],
-        "animation": "POP"
-      },
-      {
-        "text": "the bus and I haven't woken",
-        "start": 30.824000549316406,
-        "end": 32.64800109863281,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "up properly yet.",
-        "start": 32.64800109863281,
-        "end": 33.560001373291016,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "So I gotta rush to the",
-        "start": 33.560001373291016,
-        "end": 35.53052701448139,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "hackathon and let's see what we",
-        "start": 35.53052701448139,
-        "end": 37.50105265567177,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "build in these next 24 hours with",
-        "start": 37.50105265567177,
-        "end": 39.79999923706055,
-        "isTitle": false,
-        "highlight": [
-          "build",
-          "hours"
-        ],
-        "animation": "POP"
-      },
-      {
-        "text": "our sleepy eyes.",
-        "start": 39.79999923706055,
-        "end": 41.31999969482422,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "And I am the third roommate.",
-        "start": 41.31999969482422,
-        "end": 43.2400016784668,
-        "isTitle": false,
-        "highlight": [
-          "third",
-          "roommate"
-        ],
-        "animation": "POP"
-      },
-      {
-        "text": "Sorry, third participant.",
-        "start": 43.2400016784668,
-        "end": 46.040000915527344,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
-      },
-      {
-        "text": "No, no, no.",
-        "start": 46.040000915527344,
-        "end": 47.47999954223633,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE"
+        "animation": "FADE",
+        "isSceneChange": false
       }
     ]
   }

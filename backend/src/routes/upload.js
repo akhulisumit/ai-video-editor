@@ -5,6 +5,8 @@ import path from "path";
 // STEP 2
 import { extractAudio } from "../services/audio.js";
 import { transcribeAudio } from "../services/transcript.js";
+import fs from "fs"; // at top of file (only once)
+
 
 // STEP 3
 import {
@@ -48,6 +50,11 @@ router.post("/", upload.single("video"), async (req, res) => {
   let segments = segmentTranscript(transcript);
 segments = cleanSegments(segments);
 segments = await applyVisualDecisions(segments);
+
+
+// ⬇️ ADD THIS LINE
+fs.writeFileSync("sample.json", JSON.stringify({ segments }, null, 2));
+
 
 
     /* ---------- FINAL RESPONSE ---------- */
