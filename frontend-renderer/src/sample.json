@@ -16,7 +16,7 @@
         "start": 2.7257143429347446,
         "end": 5.451428685869489,
         "highlight": [
-          "really",
+          "going",
           "well"
         ],
         "captionAnimation": "FADE",
@@ -26,7 +26,9 @@
         "text": "School of",
         "start": 5.451428685869489,
         "end": 6.360000133514404,
-        "highlight": [],
+        "highlight": [
+          "School"
+        ],
         "captionAnimation": "FADE",
         "videoAnimation": "ZOOM_IN"
       },
@@ -35,7 +37,7 @@
         "start": 6.360000133514404,
         "end": 8.556923095996563,
         "highlight": [
-          "Technology",
+          "Technology's",
           "entrance"
         ],
         "captionAnimation": "FADE",
@@ -129,7 +131,7 @@
         "end": 26.552941041834213,
         "highlight": [],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "SLIDE_UP"
       },
       {
         "text": "had done some AMAs in which",

@@ -25,9 +25,9 @@ export const Caption = ({
   frame: localFrame,
   fps,
   config: {
-    damping: 18,
-    stiffness: 120,
-    mass: 0.8,
+    damping: 200,
+    stiffness: 80,
+    mass: 3,
   },
 });
 
