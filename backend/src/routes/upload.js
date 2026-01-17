@@ -2,12 +2,22 @@ import express from "express";
 import multer from "multer";
 import path from "path";
 
+// STEP 2
 import { extractAudio } from "../services/audio.js";
 import { transcribeAudio } from "../services/transcript.js";
-import { segmentTranscript } from "../services/segmenter.js";
 
+// STEP 3
+import {
+  segmentTranscript,
+  cleanSegments
+} from "../services/segmenter.js";
+
+// STEP 4
+import { applyVisualDecisions } from "../services/visualDecider.js";
 
 const router = express.Router();
+
+/* ------------------ MULTER SETUP ------------------ */
 
 const storage = multer.diskStorage({
   destination: "storage/uploads",
@@ -18,6 +28,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+/* ------------------ UPLOAD ROUTE ------------------ */
+
 router.post("/", upload.single("video"), async (req, res) => {
   try {
     if (!req.file) {
@@ -26,25 +38,35 @@ router.post("/", upload.single("video"), async (req, res) => {
 
     const videoPath = req.file.path;
 
-    // STEP 2 pipeline
+    /* ---------- STEP 2: AUDIO + TRANSCRIPTION ---------- */
+
     const audioPath = await extractAudio(videoPath);
     const transcript = await transcribeAudio(audioPath);
-    const segmentedTranscript = segmentTranscript(transcript);
 
+    /* ---------- STEP 3: SEGMENTATION ---------- */
+
+  let segments = segmentTranscript(transcript);
+segments = cleanSegments(segments);
+segments = await applyVisualDecisions(segments);
+
+
+    /* ---------- FINAL RESPONSE ---------- */
 
     res.json({
-          message: "Video processed",
-          video: videoPath,
-          audio: audioPath,
-          transcript: segmentedTranscript,
-          editPlan: {
-            segments: segmentedTranscript
+      message: "Video processed",
+      video: videoPath,
+      audio: audioPath,
+      editPlan: {
+        segments
       }
     });
 
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Processing failed" });
+    console.error("UPLOAD PIPELINE FAILED:", err);
+    res.status(500).json({
+      error: "Processing failed",
+      details: err.message
+    });
   }
 });
 

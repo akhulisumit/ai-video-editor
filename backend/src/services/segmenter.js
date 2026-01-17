@@ -76,3 +76,10 @@ export function segmentTranscript(transcript) {
 
   return finalSegments;
 }
+
+export function cleanSegments(segments) {
+    return segments.map(seg => ({
+        ...seg,
+        text: seg.text.trim()
+    })).filter(seg => seg.text.length > 0);
+}

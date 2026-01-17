@@ -1,0 +1,23 @@
+{
+  "name": "frontend-renderer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "remotion studio",
+    "build": "remotion render src/index.js AutoEditor out/video.mp4",
+    "upgrade": "remotion upgrade"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "remotion": "^4.0.407"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.407"
+  }
+}
