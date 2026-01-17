@@ -7,7 +7,9 @@
         "text": "Alright, hi everyone, hope your preparation",
         "start": 0,
         "end": 2.7257143429347446,
-        "highlight": [],
+        "highlight": [
+          "preparation"
+        ],
         "captionAnimation": "FADE",
         "videoAnimation": "ZOOM_IN"
       },
@@ -16,21 +18,18 @@
         "start": 2.7257143429347446,
         "end": 5.451428685869489,
         "highlight": [
-          "going",
           "well"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "NONE"
       },
       {
         "text": "School of",
         "start": 5.451428685869489,
         "end": 6.360000133514404,
-        "highlight": [
-          "School"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE"
       },
       {
         "text": "Technology's entrance process and the other",
@@ -41,78 +40,73 @@
           "entrance"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "NONE"
       },
       {
         "text": "entrance exams that you might be giving.",
         "start": 8.556923095996563,
         "end": 11.119999885559082,
         "highlight": [
-          "entrance",
-          "exams"
+          "entrance exams"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "NONE"
       },
       {
         "text": "Now as you know that we",
         "start": 11.119999885559082,
         "end": 13.011764470268698,
         "highlight": [],
-        "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE"
       },
       {
         "text": "have recently started applications for the",
         "start": 13.011764470268698,
         "end": 14.903529054978314,
         "highlight": [],
-        "captionAnimation": "FADE",
-        "videoAnimation": "SLIDE_UP"
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE"
       },
       {
         "text": "2026 batch and we have",
         "start": 14.903529054978314,
         "end": 16.479999542236328,
         "highlight": [
-          "2026",
-          "batch"
+          "2026"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "NONE"
       },
       {
         "text": "made certain tweaks to the application",
         "start": 16.479999542236328,
         "end": 18.729999542236328,
         "highlight": [
-          "tweaks",
-          "application"
+          "tweaks"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "SLIDE_UP"
       },
       {
         "text": "process, be it the video essay,",
         "start": 18.729999542236328,
         "end": 20.979999542236328,
         "highlight": [
-          "video",
-          "essay"
+          "video essay"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "NONE"
       },
       {
         "text": "the fast track route",
         "start": 20.979999542236328,
         "end": 22.479999542236328,
         "highlight": [
-          "fast track",
-          "route"
+          "fast track"
         ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "captionAnimation": "SLIDE_UP",
+        "videoAnimation": "NONE"
       },
       {
         "text": "or the NSET difficulty level.",
@@ -123,50 +117,51 @@
           "difficulty"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "SLIDE_UP"
+        "videoAnimation": "NONE"
       },
       {
         "text": "And in fact, like recently we",
         "start": 25,
         "end": 26.552941041834213,
         "highlight": [],
-        "captionAnimation": "FADE",
-        "videoAnimation": "SLIDE_UP"
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE"
       },
       {
         "text": "had done some AMAs in which",
         "start": 26.552941041834213,
         "end": 28.105882083668426,
         "highlight": [],
-        "captionAnimation": "FADE",
-        "videoAnimation": "SLIDE_UP"
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE"
       },
       {
         "text": "we got some common questions.",
         "start": 28.105882083668426,
         "end": 29.39999961853027,
         "highlight": [
-          "common",
-          "questions"
+          "common questions"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "NONE"
       },
       {
         "text": "So this video today is going",
         "start": 29.399999618530273,
         "end": 31.246154344998875,
-        "highlight": [],
+        "highlight": [
+          "video"
+        ],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "NONE"
       },
       {
         "text": "to clarify a lot on those changes.",
         "start": 31.246154344998875,
         "end": 33.400001525878906,
         "highlight": [],
-        "captionAnimation": "FADE",
-        "videoAnimation": "SLIDE_UP"
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE"
       }
     ]
   }

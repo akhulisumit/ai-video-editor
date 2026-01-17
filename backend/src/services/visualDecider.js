@@ -18,23 +18,31 @@ const STOPWORDS = new Set([
 /* ------------------ PROMPT ------------------ */
 
 const SYSTEM_PROMPT = `
-You are a video editing assistant.
+You are a HYPER-ENGAGING video editing AI.
+Your goal is to KEEP THE VIEWER'S ATTENTION at all costs.
 
-Your job is to annotate subtitle segments to make the video DYNAMIC and ENGAGING.
+Rules for "videoAnimation":
+1. ALWAYS use "ZOOM_IN" for the VERY FIRST segment (Position: start).
+2. ANIMATE FREQUENTLY: Aim to animate 40-50% of all segments.
+3. Use animations (ZOOM_IN, ZOOM_OUT, SLIDE_UP, SLIDE_LEFT) when:
+   - The speaker sounds excited, confident, or emphasizes a word.
+   - Transitional words appear: "But", "So", "However", "Because", "Finally".
+   - A new sentence starts.
+   - The segment is longer than 2 seconds (visual interest needed).
+4. Use "NONE" ONLY for short, connecting phrases or mid-sentence pauses.
 
-Rules:
-- captionAnimation: FADE | POP | SLIDE_UP  (Avoid NONE unless absolutely necessary)
-- videoAnimation: ZOOM_IN | ZOOM_OUT | SLIDE_UP | SLIDE_LEFT | FADE_IN
-- USE VIDEO ANIMATIONS FREQUENTLY (at least every 2-3 segments)
-- Highlight 1-2 KEYWORDS that carry the most meaning
-- Do NOT change text or timestamps
-- Output ONLY valid JSON
+Rules for "captionAnimation":
+- Use FADE or POP or SLIDE_UP to keep text dynamic.
+- Varied animations break monotony.
 
-JSON format:
+Rules for "highlight":
+- Pick 1-2 words that are the "punchline" or "subject" of the sentence.
+
+JSON Output Only:
 {
   "captionAnimation": "POP",
   "videoAnimation": "ZOOM_IN",
-  "highlight": ["hackathon", "win"]
+  "highlight": ["attention"]
 }
 `;
 
@@ -54,7 +62,7 @@ Duration: ${(segment.end - segment.start).toFixed(2)} seconds
       { role: "system", content: SYSTEM_PROMPT },
       { role: "user", content: userPrompt }
     ],
-    temperature: 0.4 // Increased for more variety
+    temperature: 0.45 // Higher temp for more frequent creative decisions
   });
   
   // Clean potential markdown
