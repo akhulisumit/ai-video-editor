@@ -3,11 +3,12 @@ import multer from "multer";
 import path from "path";
 import fs from "fs";
 
-// services you already have
+// services
 import { extractAudio } from "../services/audio.js";
 import { transcribeAudio } from "../services/transcript.js";
 import { segmentTranscript, cleanSegments } from "../services/segmenter.js";
 import { applyVisualDecisions } from "../services/visualDecider.js";
+import { getVideoMetadata } from "../services/metadata.js";
 
 const router = express.Router();
 
@@ -44,6 +45,10 @@ router.post(
       }
 
       const videoPath = req.file.path;
+
+      /* STEP 0 — METADATA */
+      const metadata = await getVideoMetadata(videoPath);
+      console.log("Video Metadata:", metadata);
 
       /* STEP 1 — AUDIO */
       const audioPath = await extractAudio(videoPath);
@@ -85,6 +90,7 @@ router.post(
       const remotionPayload = {
         video: videoFileName,
         audio: audioFileName,
+        metadata, // Saved here
         editPlan
       };
 
@@ -93,12 +99,22 @@ router.post(
         JSON.stringify(remotionPayload, null, 2)
       );
 
+      /* STEP 7 — SAVE HISTORY */
+      const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+      const historyPath = path.resolve(`storage/outputs/edit-plan-${timestamp}.json`);
+      
+      fs.writeFileSync(
+        historyPath, 
+        JSON.stringify(remotionPayload, null, 2)
+      );
+
       /* RESPONSE TO POSTMAN */
 
       res.json({
         status: "ok",
         message: "Video processed and ready for render",
-        segments: segments.length
+        segments: segments.length,
+        outputFile: historyPath
       });
 
     } catch (err) {

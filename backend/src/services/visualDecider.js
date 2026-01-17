@@ -35,14 +35,19 @@ Rules for "captionAnimation":
 - Use FADE or POP or SLIDE_UP to keep text dynamic.
 - Varied animations break monotony.
 
-Rules for "highlight":
-- Pick 1-2 words that are the "punchline" or "subject" of the sentence.
+Rules for "sectionTitle":
+- Identify major sections (e.g., "The Problem", "The Solution", "Secret Tip").
+- Return a short string (max 3 words) ONLY when a new section starts.
+- Every JSON Segment should have  a SectionTitle, it is compulsory. 
+- A group of continuous JSON can have the same SectionTitle depending on the content.
+- there should be at least 2 different section titles in the output.
 
 JSON Output Only:
 {
   "captionAnimation": "POP",
   "videoAnimation": "ZOOM_IN",
-  "highlight": ["attention"]
+  "highlight": ["attention"],
+  "sectionTitle": "The Secret"
 }
 `;
 
@@ -132,6 +137,7 @@ export async function applyVisualDecisions(segments) {
       highlight: cleanedHighlights,
       captionAnimation: decision.captionAnimation || "FADE",
       videoAnimation: decision.videoAnimation || "NONE",
+      sectionTitle: decision.sectionTitle || null
     });
 
   }

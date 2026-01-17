@@ -8,14 +8,16 @@ import {
   staticFile,
   spring,
 } from "remotion";
+import { SectionTitle } from "./SectionTitle";
+
 import { Caption } from "./Subtitle";
 
 export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-
   const currentTime = frame / fps;
 
+  // Active Segment for captions/video
   const activeSegment = segments.find(
     (seg) =>
       typeof seg.start === "number" &&
@@ -24,7 +26,18 @@ export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
       currentTime < seg.end
   );
 
-  /* ---------- VIDEO STYLE (DEFAULT: STABLE) ---------- */
+  // Active Section Title (Persistent until next title)
+  // We find the last segment before current time that had a title
+  const activeTitleSegment = [...segments]
+    .reverse()
+    .find(seg => 
+      seg.start <= currentTime && 
+      seg.sectionTitle
+    );
+    
+  const currentSectionTitle = activeTitleSegment ? activeTitleSegment.sectionTitle : null;
+
+  /* ---------- VIDEO STYLE ---------- */
 
   let videoStyle = {
     width: "100%",
@@ -33,7 +46,7 @@ export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
     opacity: 1,
   };
 
-  /* ---------- VIDEO ANIMATION (AI DRIVEN) ---------- */
+  /* ---------- VIDEO ANIMATION ---------- */
 
   if (
     activeSegment &&
@@ -47,30 +60,26 @@ export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
       frame: localFrame,
       fps,
       config: {
-        damping: 200,    // Higher damping = less rubbery/bouncy
-        stiffness: 80,   // Lower stiffness = slower movement (looser spring)
-        mass: 3,         // Higher mass = more inertia (takes longer to settle)
+        damping: 200,
+        stiffness: 80,
+        mass: 3,
       },
     });
 
     switch (activeSegment.videoAnimation) {
       case "ZOOM_IN":
-        // Increased range: 1.0 -> 1.15 (15% zoom)
         videoStyle.transform = `scale(${1 + 0.15 * progress})`;
         break;
 
       case "ZOOM_OUT":
-        // Increased range: 1.15 -> 1.0
         videoStyle.transform = `scale(${1.15 - 0.15 * progress})`;
         break;
 
       case "SLIDE_UP":
-        // Increased range: 100px
         videoStyle.transform = `translateY(${(1 - progress) * 100}px)`;
         break;
 
       case "SLIDE_LEFT":
-        // Increased range: 100px
         videoStyle.transform = `translateX(${(1 - progress) * 100}px)`;
         break;
 
@@ -83,8 +92,6 @@ export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
     }
   }
 
-  /* ---------- RENDER ---------- */
-
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
       <AbsoluteFill style={videoStyle}>
@@ -92,15 +99,19 @@ export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
       </AbsoluteFill>
 
       {audioSrc && <Audio src={staticFile(audioSrc)} />}
+      
+      {/* Section Title Overlay */}
+      <SectionTitle title={currentSectionTitle} />
 
       {activeSegment && (
         <Caption
-          text={activeSegment.text}
-          start={activeSegment.start}
-          end={activeSegment.end}
-          isTitle={activeSegment.isTitle}
-          highlight={activeSegment.highlight}
-          animation={activeSegment.captionAnimation}
+           // ... props
+           text={activeSegment.text}
+           start={activeSegment.start}
+           end={activeSegment.end}
+           isTitle={activeSegment.isTitle}
+           highlight={activeSegment.highlight}
+           animation={activeSegment.captionAnimation}
         />
       )}
     </AbsoluteFill>

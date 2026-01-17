@@ -17,8 +17,8 @@ export const RemotionRoot = () => (
     component={MyVideo}
     durationInFrames={durationInFrames}
     fps={fps}
-    width={1920}
-    height={1080}
+    width={data.metadata?.width || 1920}
+    height={data.metadata?.height || 1080}
     defaultProps={{
       videoSrc: data.video,
       audioSrc: data.audio,
