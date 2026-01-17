@@ -1,15 +1,26 @@
 import React from "react";
-import { AbsoluteFill, Audio, Video, useCurrentFrame, useVideoConfig, staticFile } from "remotion";
+import {
+  AbsoluteFill,
+  Audio,
+  Video,
+  useCurrentFrame,
+  useVideoConfig,
+  staticFile,
+} from "remotion";
 import { Caption } from "./Subtitle";
 
 export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // Find the active segment for the current frame
   const currentTime = frame / fps;
+
   const activeSegment = segments.find(
-    (seg) => currentTime >= seg.start && currentTime < seg.end
+    (seg) =>
+      typeof seg.start === "number" &&
+      typeof seg.end === "number" &&
+      currentTime >= seg.start &&
+      currentTime < seg.end
   );
 
   return (
@@ -19,10 +30,12 @@ export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
 
       {activeSegment && (
         <Caption
-            text={activeSegment.text}
-            isTitle={activeSegment.isTitle}
-            highlight={activeSegment.highlight}
-            animation={activeSegment.animation}
+          text={activeSegment.text}
+          start={activeSegment.start}
+          end={activeSegment.end}
+          isTitle={activeSegment.isTitle}
+          highlight={activeSegment.highlight}
+          animation={activeSegment.animation}
         />
       )}
     </AbsoluteFill>
