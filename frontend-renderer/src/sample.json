@@ -16,7 +16,7 @@
         "start": 2.7257143429347446,
         "end": 5.451428685869489,
         "highlight": [
-          "going",
+          "really",
           "well"
         ],
         "captionAnimation": "FADE",
@@ -26,9 +26,7 @@
         "text": "School of",
         "start": 5.451428685869489,
         "end": 6.360000133514404,
-        "highlight": [
-          "School"
-        ],
+        "highlight": [],
         "captionAnimation": "FADE",
         "videoAnimation": "ZOOM_IN"
       },
@@ -41,7 +39,7 @@
           "entrance"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "SLIDE_UP"
+        "videoAnimation": "ZOOM_IN"
       },
       {
         "text": "entrance exams that you might be giving.",
@@ -52,7 +50,7 @@
           "exams"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "SLIDE_UP"
+        "videoAnimation": "ZOOM_IN"
       },
       {
         "text": "Now as you know that we",
@@ -68,7 +66,7 @@
         "end": 14.903529054978314,
         "highlight": [],
         "captionAnimation": "FADE",
-        "videoAnimation": "ZOOM_IN"
+        "videoAnimation": "SLIDE_UP"
       },
       {
         "text": "2026 batch and we have",
@@ -97,8 +95,8 @@
         "start": 18.729999542236328,
         "end": 20.979999542236328,
         "highlight": [
-          "process",
-          "video essay"
+          "video",
+          "essay"
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "ZOOM_IN"
