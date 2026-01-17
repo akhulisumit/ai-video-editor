@@ -54,7 +54,7 @@ export const Caption = ({
         bottom: isTitle ? "40%" : "10%",
         width: "100%",
         textAlign: "center",
-        fontSize: isTitle ? 80 : 52,
+        fontSize: isTitle ? 100 : 100,
         fontWeight: isTitle ? "bold" : 600,
         color: isTitle ? "#fbbf24" : "white",
         transform,

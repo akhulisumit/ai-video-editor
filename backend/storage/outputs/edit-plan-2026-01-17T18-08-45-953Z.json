@@ -13,9 +13,10 @@
         "start": 0,
         "end": 2.7257143429347446,
         "highlight": [
+          "everyone",
           "preparation"
         ],
-        "captionAnimation": "POP",
+        "captionAnimation": "FADE",
         "videoAnimation": "ZOOM_IN",
         "sectionTitle": "The Secret"
       },
@@ -24,7 +25,7 @@
         "start": 2.7257143429347446,
         "end": 5.451428685869489,
         "highlight": [
-          "Scalar"
+          "really well"
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "NONE",
@@ -60,7 +61,7 @@
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "NONE",
-        "sectionTitle": "The Challenge"
+        "sectionTitle": "The Secret"
       },
       {
         "text": "Now as you know that we",
@@ -168,8 +169,8 @@
           "video",
           "today"
         ],
-        "captionAnimation": "SLIDE_UP",
-        "videoAnimation": "ZOOM_OUT",
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
       },
       {
