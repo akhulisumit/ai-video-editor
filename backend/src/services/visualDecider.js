@@ -1,14 +1,14 @@
 import OpenAI from "openai";
-console.log("🚨 VISUAL DECIDER LOADED 🚨");
+import { VIDEO_ANIMATIONS } from "../config/videoAnimations.js";
 
+
+console.log("🚨 VISUAL DECIDER LOADED 🚨");
 
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
 /* ------------------ CONSTANTS ------------------ */
-
-const ANIMATIONS = ["NONE", "FADE", "POP", "SLIDE_UP"];
 
 const STOPWORDS = new Set([
   "the","and","is","in","to","of","we","i","it","a","at","on","for",
@@ -20,25 +20,24 @@ const STOPWORDS = new Set([
 const SYSTEM_PROMPT = `
 You are a video editing assistant.
 
-Your task is to ANNOTATE caption segments.
+Your job is to annotate subtitle segments to make the video DYNAMIC and ENGAGING.
 
 Rules:
-- Choose animation from: NONE, FADE, POP, SLIDE_UP
-- Highlight at most 2 IMPORTANT words that already exist in the text
-- NEVER highlight stopwords, filler words, or single letters
-- NEVER highlight meaningless numbers unless they carry meaning
+- captionAnimation: FADE | POP | SLIDE_UP  (Avoid NONE unless absolutely necessary)
+- videoAnimation: ZOOM_IN | ZOOM_OUT | SLIDE_UP | SLIDE_LEFT | FADE_IN
+- USE VIDEO ANIMATIONS FREQUENTLY (at least every 2-3 segments)
+- Highlight 1-2 KEYWORDS that carry the most meaning
 - Do NOT change text or timestamps
-- Set isTitle true only if it sounds like an intro or section heading
-- Output ONLY valid JSON (no markdown, no explanation)
-- Give alteast 3 isSceneChange true and apply whereever you feel its needed
+- Output ONLY valid JSON
 
 JSON format:
 {
-  "animation": "FADE",
-  "highlight": ["word1", "word2"],
-  "isTitle": false
+  "captionAnimation": "POP",
+  "videoAnimation": "ZOOM_IN",
+  "highlight": ["hackathon", "win"]
 }
 `;
+
 
 /* ------------------ AI CALL ------------------ */
 
@@ -55,10 +54,18 @@ Duration: ${(segment.end - segment.start).toFixed(2)} seconds
       { role: "system", content: SYSTEM_PROMPT },
       { role: "user", content: userPrompt }
     ],
-    temperature: 0.2
+    temperature: 0.4 // Increased for more variety
   });
+  
+  // Clean potential markdown
+  let content = response.choices[0].message.content;
+  if (content.startsWith("```json")) {
+    content = content.replace(/^```json\n/, "").replace(/\n```$/, "");
+  } else if (content.startsWith("```")) {
+     content = content.replace(/^```\n/, "").replace(/\n```$/, "");
+  }
 
-  return JSON.parse(response.choices[0].message.content);
+  return JSON.parse(content);
 }
 
 /* ------------------ POST PROCESSING ------------------ */
@@ -76,24 +83,19 @@ function cleanHighlights(text, highlights = []) {
     .slice(0, 2);
 }
 
-function resolveAnimation(isTitle, highlights) {
-  if (isTitle) return "SLIDE_UP";
-  if (highlights.length > 0) return "POP";
-  return "FADE";
-}
-
 /* ------------------ PUBLIC API ------------------ */
 
 export async function applyVisualDecisions(segments) {
   console.log("🔥 APPLY VISUAL DECISIONS RUNNING");
 
   const enriched = [];
+  let sceneChangeCount = 0;
 
   for (let i = 0; i < segments.length; i++) {
     const segment = segments[i];
     const decision = await decideVisuals(segment, i);
 
-    // Deterministic title rule
+    // Force title only for first strong segment
     const forcedTitle =
       i === 0 && (segment.end - segment.start) >= 2;
 
@@ -102,23 +104,31 @@ export async function applyVisualDecisions(segments) {
       decision.highlight || []
     );
 
-    const animation = resolveAnimation(
-      forcedTitle || decision.isTitle === true,
-      cleanedHighlights
-    );
+    let isSceneChange = Boolean(decision.isSceneChange);
 
-    // 🔑 NEW RULE: decide when video should animate
-    const isSceneChange =
-      forcedTitle || animation === "SLIDE_UP";
+    // 🔒 SAFETY: ensure at least 3 scene changes total
+    if (
+      !isSceneChange &&
+      sceneChangeCount < 3 &&
+      (forcedTitle || cleanedHighlights.length > 0)
+    ) {
+      isSceneChange = true;
+    }
+
+    if (isSceneChange) {
+      sceneChangeCount++;
+    }
 
     enriched.push({
       ...segment,
-      isTitle: forcedTitle || decision.isTitle === true,
       highlight: cleanedHighlights,
-      animation,
-      isSceneChange, // 👈 NEW FIELD
+      captionAnimation: decision.captionAnimation || "FADE",
+      videoAnimation: decision.videoAnimation || "NONE",
     });
+
   }
+
+  console.log(`🎬 Scene changes decided: ${sceneChangeCount}`);
 
   return enriched;
 }

@@ -4,52 +4,169 @@
   "editPlan": {
     "segments": [
       {
-        "text": "Hi everyone hope your preparation is",
+        "text": "Alright, hi everyone, hope your preparation",
         "start": 0,
-        "end": 2.5920001029968263,
-        "isTitle": true,
+        "end": 2.7257143429347446,
         "highlight": [],
-        "animation": "SLIDE_UP",
-        "isSceneChange": true
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
       },
       {
-        "text": "going really well for",
-        "start": 2.5920001029968263,
-        "end": 4.320000171661377,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE",
-        "isSceneChange": false
-      },
-      {
-        "text": "scalar school of technology's entrance process",
-        "start": 4.320000171661377,
-        "end": 6.127058786504409,
-        "isTitle": false,
+        "text": "is going really well for Scalar",
+        "start": 2.7257143429347446,
+        "end": 5.451428685869489,
         "highlight": [
-          "scalar",
-          "technology"
+          "going",
+          "well"
         ],
-        "animation": "POP",
-        "isSceneChange": false
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
       },
       {
-        "text": "and and the other entrance exams",
-        "start": 6.127058786504409,
-        "end": 7.934117401347441,
-        "isTitle": false,
-        "highlight": [],
-        "animation": "FADE",
-        "isSceneChange": false
+        "text": "School of",
+        "start": 5.451428685869489,
+        "end": 6.360000133514404,
+        "highlight": [
+          "School"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
       },
       {
-        "text": "that you might be giving",
-        "start": 7.934117401347441,
-        "end": 9.4399995803833,
-        "isTitle": false,
+        "text": "Technology's entrance process and the other",
+        "start": 6.360000133514404,
+        "end": 8.556923095996563,
+        "highlight": [
+          "Technology",
+          "entrance"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "SLIDE_UP"
+      },
+      {
+        "text": "entrance exams that you might be giving.",
+        "start": 8.556923095996563,
+        "end": 11.119999885559082,
+        "highlight": [
+          "entrance",
+          "exams"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "SLIDE_UP"
+      },
+      {
+        "text": "Now as you know that we",
+        "start": 11.119999885559082,
+        "end": 13.011764470268698,
         "highlight": [],
-        "animation": "FADE",
-        "isSceneChange": false
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
+      },
+      {
+        "text": "have recently started applications for the",
+        "start": 13.011764470268698,
+        "end": 14.903529054978314,
+        "highlight": [],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
+      },
+      {
+        "text": "2026 batch and we have",
+        "start": 14.903529054978314,
+        "end": 16.479999542236328,
+        "highlight": [
+          "2026",
+          "batch"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
+      },
+      {
+        "text": "made certain tweaks to the application",
+        "start": 16.479999542236328,
+        "end": 18.729999542236328,
+        "highlight": [
+          "tweaks",
+          "application"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
+      },
+      {
+        "text": "process, be it the video essay,",
+        "start": 18.729999542236328,
+        "end": 20.979999542236328,
+        "highlight": [
+          "process",
+          "video essay"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
+      },
+      {
+        "text": "the fast track route",
+        "start": 20.979999542236328,
+        "end": 22.479999542236328,
+        "highlight": [
+          "fast track",
+          "route"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
+      },
+      {
+        "text": "or the NSET difficulty level.",
+        "start": 22.479999542236328,
+        "end": 25,
+        "highlight": [
+          "NSET",
+          "difficulty"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "SLIDE_UP"
+      },
+      {
+        "text": "And in fact, like recently we",
+        "start": 25,
+        "end": 26.552941041834213,
+        "highlight": [],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
+      },
+      {
+        "text": "had done some AMAs in which",
+        "start": 26.552941041834213,
+        "end": 28.105882083668426,
+        "highlight": [],
+        "captionAnimation": "FADE",
+        "videoAnimation": "SLIDE_UP"
+      },
+      {
+        "text": "we got some common questions.",
+        "start": 28.105882083668426,
+        "end": 29.39999961853027,
+        "highlight": [
+          "common",
+          "questions"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
+      },
+      {
+        "text": "So this video today is going",
+        "start": 29.399999618530273,
+        "end": 31.246154344998875,
+        "highlight": [],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN"
+      },
+      {
+        "text": "to clarify a lot on those changes.",
+        "start": 31.246154344998875,
+        "end": 33.400001525878906,
+        "highlight": [],
+        "captionAnimation": "FADE",
+        "videoAnimation": "SLIDE_UP"
       }
     ]
   }

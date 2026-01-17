@@ -1,0 +1,16 @@
+export const VIDEO_ANIMATIONS = {
+  NONE: "NONE",
+  FADE_IN: "FADE_IN",
+  ZOOM_IN: "ZOOM_IN",
+  ZOOM_OUT: "ZOOM_OUT",
+  SLIDE_UP: "SLIDE_UP",
+  SLIDE_LEFT: "SLIDE_LEFT",
+  SLIDE_RIGHT: "SLIDE_RIGHT"
+};
+
+export const CAPTION_ANIMATIONS = {
+    NONE: "NONE",
+    FADE: "FADE", 
+    POP: "POP", 
+    SLIDE_UP: "SLIDE_UP"
+};

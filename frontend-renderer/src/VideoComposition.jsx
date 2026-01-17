@@ -1,29 +1,30 @@
 import React from "react";
 import {
   AbsoluteFill,
-  Video,
   Audio,
-  staticFile,
+  Video,
   useCurrentFrame,
   useVideoConfig,
+  staticFile,
   spring,
 } from "remotion";
-
 import { Caption } from "./Subtitle";
-import editPlan from "./sample.json";
 
-export const MyVideo = ({ videoSrc, audioSrc }) => {
+export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const segments = editPlan.segments;
   const currentTime = frame / fps;
 
   const activeSegment = segments.find(
-    (s) => currentTime >= s.start && currentTime < s.end
+    (seg) =>
+      typeof seg.start === "number" &&
+      typeof seg.end === "number" &&
+      currentTime >= seg.start &&
+      currentTime < seg.end
   );
 
-  // ---------------- VIDEO ANIMATION ----------------
+  /* ---------- VIDEO STYLE (DEFAULT: STABLE) ---------- */
 
   let videoStyle = {
     width: "100%",
@@ -32,38 +33,61 @@ export const MyVideo = ({ videoSrc, audioSrc }) => {
     opacity: 1,
   };
 
-  if (activeSegment?.isSceneChange) {
+  /* ---------- VIDEO ANIMATION (AI DRIVEN) ---------- */
+
+  if (
+    activeSegment &&
+    typeof activeSegment.videoAnimation === "string" &&
+    activeSegment.videoAnimation !== "NONE"
+  ) {
     const startFrame = Math.floor(activeSegment.start * fps);
     const localFrame = frame - startFrame;
 
     const progress = spring({
       frame: localFrame,
       fps,
-      config: { damping: 200 },
+      config: {
+        damping: 18,
+        stiffness: 120,
+        mass: 0.9,
+      },
     });
 
-    if (activeSegment.animation === "SLIDE_UP") {
-      videoStyle.transform = `translateY(${(1 - progress) * 40}px)`;
-    }
+    switch (activeSegment.videoAnimation) {
+      case "ZOOM_IN":
+        videoStyle.transform = `scale(${1 + 0.02 * progress})`;
+        break;
 
-    if (activeSegment.animation === "POP") {
-      videoStyle.transform = `scale(${1 + 0.05 * progress})`;
-    }
+      case "ZOOM_OUT":
+        videoStyle.transform = `scale(${1.02 - 0.02 * progress})`;
+        break;
 
-    if (activeSegment.animation === "FADE") {
-      videoStyle.opacity = progress;
+      case "SLIDE_UP":
+        videoStyle.transform = `translateY(${(1 - progress) * 25}px)`;
+        break;
+
+      case "SLIDE_LEFT":
+        videoStyle.transform = `translateX(${(1 - progress) * 25}px)`;
+        break;
+
+      case "FADE_IN":
+        videoStyle.opacity = progress;
+        break;
+
+      default:
+        break;
     }
   }
 
-  // ---------------- RENDER ----------------
+  /* ---------- RENDER ---------- */
 
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
       <AbsoluteFill style={videoStyle}>
-        <Video src={staticFile(videoSrc)} />
+        {videoSrc && <Video src={staticFile(videoSrc)} />}
       </AbsoluteFill>
 
-      <Audio src={staticFile(audioSrc)} />
+      {audioSrc && <Audio src={staticFile(audioSrc)} />}
 
       {activeSegment && (
         <Caption
@@ -72,7 +96,7 @@ export const MyVideo = ({ videoSrc, audioSrc }) => {
           end={activeSegment.end}
           isTitle={activeSegment.isTitle}
           highlight={activeSegment.highlight}
-          animation={activeSegment.animation}
+          animation={activeSegment.captionAnimation}
         />
       )}
     </AbsoluteFill>

@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  useCurrentFrame,
-  useVideoConfig,
-  spring,
-} from "remotion";
+import { useCurrentFrame, useVideoConfig, spring } from "remotion";
 
 export const Caption = ({
   text,
@@ -16,81 +12,70 @@ export const Caption = ({
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // Convert time → frames
+  if (typeof start !== "number" || typeof end !== "number") return null;
+
   const startFrame = Math.floor(start * fps);
   const endFrame = Math.floor(end * fps);
 
-  // Hard cut outside segment
   if (frame < startFrame || frame > endFrame) return null;
 
-  // Animation runs RELATIVE to segment start
   const localFrame = frame - startFrame;
 
   const progress = spring({
-    frame: localFrame,
-    fps,
-    config: { damping: 200 },
-  });
+  frame: localFrame,
+  fps,
+  config: {
+    damping: 18,
+    stiffness: 120,
+    mass: 0.8,
+  },
+});
 
-  /* ---------------- ANIMATION LOGIC ---------------- */
 
   let transform = "none";
   let opacity = 1;
 
   if (animation === "POP") {
-    transform = `scale(${0.85 + 0.15 * progress})`;
+    transform = `scale(${0.9 + 0.1 * progress})`;
   }
 
   if (animation === "SLIDE_UP") {
-    transform = `translateY(${(1 - progress) * 40}px)`;
+    transform = `translateY(${(1 - progress) * 30}px)`;
   }
 
   if (animation === "FADE") {
     opacity = progress;
   }
 
-  /* ---------------- STYLES ---------------- */
-
-  const baseStyle = {
-    position: "absolute",
-    width: "100%",
-    textAlign: "center",
-    fontFamily: "sans-serif",
-    textShadow: "0 4px 12px rgba(0,0,0,0.6)",
-    transform,
-    opacity,
-  };
-
-  const style = isTitle
-    ? {
-        ...baseStyle,
-        top: "30%",
-        fontSize: 80,
-        fontWeight: "bold",
-        color: "#fbbf24",
-      }
-    : {
-        ...baseStyle,
-        bottom: 120,
-        fontSize: 52,
-        fontWeight: 600,
-        color: "white",
-      };
-
-  /* ---------------- RENDER ---------------- */
-
   return (
-    <div style={style}>
+    <div
+      style={{
+        position: "absolute",
+        bottom: isTitle ? "40%" : "10%",
+        width: "100%",
+        textAlign: "center",
+        fontSize: isTitle ? 80 : 52,
+        fontWeight: isTitle ? "bold" : 600,
+        color: isTitle ? "#fbbf24" : "white",
+        transform,
+        opacity,
+        textShadow: "0 4px 12px rgba(0,0,0,0.6)",
+      }}
+    >
       {text.split(" ").map((word, i) => {
-        const clean = word.replace(/[^\w]/g, "");
-        const isHighlighted = highlight.includes(clean);
+        // robust matching: remove punctuation, lowercase
+        const clean = word.toLowerCase().replace(/[^\w]/g, "");
+        const shouldHighlight = highlight.some(h => 
+          h.toLowerCase().replace(/[^\w]/g, "") === clean
+        );
 
         return (
           <span
             key={i}
             style={{
-              color: isHighlighted ? "#fbbf24" : "inherit",
+              color: shouldHighlight ? "#fbbf24" : "white",
               marginRight: 8,
+              display: "inline-block"
             }}
           >
             {word}
