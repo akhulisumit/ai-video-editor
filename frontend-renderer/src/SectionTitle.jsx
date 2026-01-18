@@ -8,20 +8,21 @@ export const SectionTitle = ({ title }) => {
     <div
       style={{
         position: "absolute",
-        top: 60,
-        right: 60,
+        top: 80,
+        right: 80,
         backgroundColor: "rgba(0,0,0,0.6)",
         color: "white",
-        padding: "15px 30px",
-        borderRadius: "15px",
+        padding: "20px 40px",
+        borderRadius: "20px",
         fontFamily: "sans-serif",
-        fontSize: 32,
+        fontSize: 80,
         fontWeight: "bold",
         textTransform: "uppercase",
-        letterSpacing: "2px",
-        backdropFilter: "blur(5px)",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-        border: "1px solid rgba(255,255,255,0.2)"
+        letterSpacing: "4px",
+        backdropFilter: "blur(10px)",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+        border: "2px solid rgba(255,255,255,0.2)",
+        zIndex: 1000
       }}
     >
       {title}
