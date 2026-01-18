@@ -3,3 +3,4 @@ node_modules
 frontend-renderer/public/
 frontend-renderer/public/*.mp4
 frontend-renderer/public/*.wav
+frontend-renderer/out/

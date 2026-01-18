@@ -1,0 +1,186 @@
+{
+  "video": "video.mp4",
+  "audio": "audio.wav",
+  "metadata": {
+    "width": 3840,
+    "height": 2160,
+    "duration": 33.466767
+  },
+  "editPlan": {
+    "segments": [
+      {
+        "text": "Alright, hi everyone, hope your preparation",
+        "start": 0,
+        "end": 2.7257143429347446,
+        "highlight": [
+          "preparation"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "is going really well for Scalar",
+        "start": 2.7257143429347446,
+        "end": 5.451428685869489,
+        "highlight": [
+          "really well"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "School of",
+        "start": 5.451428685869489,
+        "end": 6.360000133514404,
+        "highlight": [],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "Technology's entrance process and the other",
+        "start": 6.360000133514404,
+        "end": 8.556923095996563,
+        "highlight": [
+          "Technology's entrance"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "entrance exams that you might be giving.",
+        "start": 8.556923095996563,
+        "end": 11.119999885559082,
+        "highlight": [
+          "entrance exams"
+        ],
+        "captionAnimation": "SLIDE_UP",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "Now as you know that we",
+        "start": 11.119999885559082,
+        "end": 13.011764470268698,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "have recently started applications for the",
+        "start": 13.011764470268698,
+        "end": 14.903529054978314,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "2026 batch and we have",
+        "start": 14.903529054978314,
+        "end": 16.479999542236328,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "made certain tweaks to the application",
+        "start": 16.479999542236328,
+        "end": 18.729999542236328,
+        "highlight": [
+          "tweaks",
+          "application"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "process, be it the video essay,",
+        "start": 18.729999542236328,
+        "end": 20.979999542236328,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "the fast track route",
+        "start": 20.979999542236328,
+        "end": 22.479999542236328,
+        "highlight": [
+          "fast track"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "or the NSET difficulty level and",
+        "start": 22.479999542236328,
+        "end": 24.386666615804035,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "in fact like recently we had",
+        "start": 24.386666615804035,
+        "end": 26.293333689371742,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "done some AMAs in which we",
+        "start": 26.293333689371742,
+        "end": 28.20000076293945,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "got some common questions.",
+        "start": 28.200000762939453,
+        "end": 29.399999618530273,
+        "highlight": [
+          "common questions"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "So this video today is going",
+        "start": 29.399999618530273,
+        "end": 31.39384651184082,
+        "highlight": [
+          "this video today"
+        ],
+        "captionAnimation": "SLIDE_UP",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "to clarify a lot on those changes.",
+        "start": 31.39384651184082,
+        "end": 33.720001220703125,
+        "highlight": [
+          "clarify",
+          "changes"
+        ],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      }
+    ]
+  }
+}

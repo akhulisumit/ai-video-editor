@@ -2,612 +2,212 @@
   "video": "video.mp4",
   "audio": "audio.wav",
   "metadata": {
-    "width": 848,
-    "height": 478,
-    "duration": 80.459111
+    "width": 3840,
+    "height": 2160,
+    "duration": 33.466767
   },
   "editPlan": {
     "segments": [
       {
-        "text": "So, hey guys, a lot of",
+        "text": "Alright, hi everyone, hope your preparation",
         "start": 0,
-        "end": 2.088000011444092,
+        "end": 2.7257143429347446,
         "highlight": [
-          "hey",
-          "a lot"
+          "preparation"
         ],
-        "captionAnimation": "POP",
+        "captionAnimation": "FADE",
         "videoAnimation": "ZOOM_IN",
         "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
+        "captionColor": "yellow"
       },
       {
-        "text": "learners come up to me and",
-        "start": 2.088000011444092,
-        "end": 4.176000022888184,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "they ask, you know, we are",
-        "start": 4.176000022888184,
-        "end": 6.264000034332276,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "trying to",
-        "start": 6.264000034332276,
-        "end": 6.9600000381469735,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "learn software engineering. So, which way",
-        "start": 6.960000038146973,
-        "end": 9.519999885559082,
+        "text": "is going really well for Scalar",
+        "start": 2.7257143429347446,
+        "end": 5.451428685869489,
         "highlight": [
-          "learn",
-          "software engineering"
-        ],
-        "captionAnimation": "SLIDE_UP",
-        "videoAnimation": "ZOOM_OUT",
-        "sectionTitle": "The Path",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "should we go? Should we use",
-        "start": 9.519999885559082,
-        "end": 12.079999732971192,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "like AI intensively",
-        "start": 12.079999732971192,
-        "end": 13.359999656677246,
-        "highlight": [],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "or should we go back to",
-        "start": 13.359999656677246,
-        "end": 15.195293707006117,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "the old school way of, you",
-        "start": 15.195293707006117,
-        "end": 17.030587757334988,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "know, looking at questions, thinking",
-        "start": 17.030587757334988,
-        "end": 18.559999465942383,
-        "highlight": [
-          "thinking"
-        ],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "of answers and",
-        "start": 18.559999465942383,
-        "end": 19.739999453226723,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "then ,",
-        "start": 19.739999453226723,
-        "end": 20.526666111416283,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "you know ,",
-        "start": 20.526666111416283,
-        "end": 21.706666098700627,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "working through it and",
-        "start": 21.706666098700627,
-        "end": 23.27999941507975,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "using Stack Overflow? So , generally",
-        "start": 23.27999941507975,
-        "end": 25.639999389648434,
-        "highlight": [
-          "using Stack Overflow"
-        ],
-        "captionAnimation": "SLIDE_UP",
-        "videoAnimation": "ZOOM_OUT",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "my answer is a hybrid of",
-        "start": 25.639999389648438,
-        "end": 28,
-        "highlight": [
-          "hybrid"
+          "Scalar"
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
+        "captionColor": "yellow"
       },
       {
-        "text": "things. Use AI to learn stuff,",
-        "start": 28,
-        "end": 30.360000610351562,
+        "text": "School of",
+        "start": 5.451428685869489,
+        "end": 6.360000133514404,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret",
+        "captionColor": "yellow"
+      },
+      {
+        "text": "Technology's entrance process and the other",
+        "start": 6.360000133514404,
+        "end": 8.556923095996563,
         "highlight": [
-          "learn"
+          "Technology's entrance"
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
+        "captionColor": "yellow"
       },
       {
-        "text": "okay. Majorly, if you are someone",
-        "start": 30.360000610351562,
-        "end": 32.720001220703125,
+        "text": "entrance exams that you might be giving.",
+        "start": 8.556923095996563,
+        "end": 11.119999885559082,
         "highlight": [
-          "someone"
-        ],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "who is just ,",
-        "start": 32.720001220703125,
-        "end": 33.88705982881434,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "you know ,",
-        "start": 33.88705982881434,
-        "end": 34.76235378489775,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "using AI prompting and",
-        "start": 34.76235378489775,
-        "end": 35.92941239300896,
-        "highlight": [
-          "AI prompting"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "generating software ,",
-        "start": 35.92941239300896,
-        "end": 36.80470634909237,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "then the problem",
-        "start": 36.80470634909237,
-        "end": 37.68000030517578,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Problem",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "that you would go into is",
-        "start": 37.68000030517578,
-        "end": 39.82500076293945,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "eventually when the system becomes really",
-        "start": 39.82500076293945,
-        "end": 41.970001220703125,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "really big, AI loses",
-        "start": 41.970001220703125,
-        "end": 43.400001525878906,
-        "highlight": [
-          "really big",
-          "AI loses"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Problem",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "context of it and",
-        "start": 43.400001525878906,
-        "end": 44.48666763305664,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "because of that ,",
-        "start": 44.48666763305664,
-        "end": 45.573333740234375,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "as an engineer ,",
-        "start": 45.573333740234375,
-        "end": 46.65999984741211,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "you might be able to ,",
-        "start": 46.65999984741211,
-        "end": 48.28999900817871,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "you know ,",
-        "start": 48.28999900817871,
-        "end": 49.10499858856201,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "do like very",
-        "start": 49.10499858856201,
-        "end": 49.91999816894531,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "small projects like really really quick but",
-        "start": 49.91999816894531,
-        "end": 52.63249850273132,
-        "highlight": [
-          "small projects",
-          "quick"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "when there are large projects ,",
-        "start": 52.63249850273132,
-        "end": 54.95749878883362,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "then AI hallucinates.",
-        "start": 54.95749878883362,
-        "end": 56.119998931884766,
-        "highlight": [
-          "hallucinates"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "So then, the debugging becomes hell.",
-        "start": 56.119998931884766,
-        "end": 58.15999984741211,
-        "highlight": [
-          "debugging",
-          "hell"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "SLIDE_UP",
-        "sectionTitle": "The Problem",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "But if you know how to",
-        "start": 58.15999984741211,
-        "end": 60.20000076293945,
-        "highlight": [
-          "know"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "SLIDE_UP",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "write code with your own hand",
-        "start": 60.20000076293945,
-        "end": 62.2400016784668,
-        "highlight": [
-          "write code"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "and use AI as a supplement",
-        "start": 62.2400016784668,
-        "end": 64.64000140919404,
-        "highlight": [
-          "supplement"
+          "entrance exams"
         ],
         "captionAnimation": "SLIDE_UP",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
+        "captionColor": "yellow",
+        "bRollRequest": "Students taking exams in a classroom"
       },
       {
-        "text": "rather than something that is the",
-        "start": 64.64000140919404,
-        "end": 67.04000113992129,
+        "text": "Now as you know that we",
+        "start": 11.119999885559082,
+        "end": 13.011764470268698,
         "highlight": [],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
+        "captionColor": "yellow"
       },
       {
-        "text": "core of the programming, then,",
-        "start": 67.04000113992129,
-        "end": 69.04000091552733,
+        "text": "have recently started applications for the",
+        "start": 13.011764470268698,
+        "end": 14.903529054978314,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret",
+        "captionColor": "yellow"
+      },
+      {
+        "text": "2026 batch and we have",
+        "start": 14.903529054978314,
+        "end": 16.479999542236328,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret",
+        "captionColor": "yellow"
+      },
+      {
+        "text": "made certain tweaks to the application",
+        "start": 16.479999542236328,
+        "end": 18.729999542236328,
         "highlight": [
-          "core",
-          "programming"
-        ],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "you know ,",
-        "start": 69.04000091552734,
-        "end": 69.81052679764598,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "you are going to face problems.",
-        "start": 69.81052679764598,
-        "end": 71.35157856188323,
-        "highlight": [
-          "problems"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Challenge",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "So ,",
-        "start": 71.35157856188323,
-        "end": 71.86526248329565,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "essentially ,",
-        "start": 71.86526248329565,
-        "end": 72.37894640470807,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "my advice to the young folks",
-        "start": 72.37894640470807,
-        "end": 73.91999816894533,
-        "highlight": [
-          "advice"
+          "tweaks",
+          "application"
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
+        "captionColor": "yellow"
       },
       {
-        "text": "out there is use AI ,",
-        "start": 73.91999816894531,
-        "end": 75.7649974822998,
-        "highlight": [],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
-      },
-      {
-        "text": "learn stuff ,",
-        "start": 75.7649974822998,
-        "end": 76.68749713897705,
+        "text": "process, be it the video essay,",
+        "start": 18.729999542236328,
+        "end": 20.979999542236328,
         "highlight": [
-          "learn"
+          "process"
         ],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
+        "captionColor": "yellow"
       },
       {
-        "text": "understand every line and",
-        "start": 76.68749713897705,
-        "end": 77.91749668121338,
+        "text": "the fast track route",
+        "start": 20.979999542236328,
+        "end": 22.479999542236328,
+        "highlight": [
+          "fast track"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret",
+        "captionColor": "yellow"
+      },
+      {
+        "text": "or the NSET difficulty level.",
+        "start": 22.479999542236328,
+        "end": 25,
         "highlight": [],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
+        "captionColor": "yellow"
       },
       {
-        "text": "go through it.",
-        "start": 77.91749668121338,
-        "end": 78.83999633789062,
+        "text": "And in fact, like recently we",
+        "start": 25,
+        "end": 26.552941041834213,
         "highlight": [],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret",
-        "sectionTitleSize": 16,
-        "captionSize": 30
+        "captionColor": "yellow"
+      },
+      {
+        "text": "had done some AMAs in which",
+        "start": 26.552941041834213,
+        "end": 28.105882083668426,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret",
+        "captionColor": "yellow"
+      },
+      {
+        "text": "we got some common questions.",
+        "start": 28.105882083668426,
+        "end": 29.39999961853027,
+        "highlight": [
+          "common questions"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret",
+        "captionColor": "yellow"
+      },
+      {
+        "text": "So this video today is going",
+        "start": 29.399999618530273,
+        "end": 31.246154344998875,
+        "highlight": [
+          "this video",
+          "going"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret",
+        "captionColor": "yellow"
+      },
+      {
+        "text": "to clarify a lot on those changes.",
+        "start": 31.246154344998875,
+        "end": 33.400001525878906,
+        "highlight": [
+          "clarify",
+          "changes"
+        ],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret",
+        "captionColor": "yellow"
       }
     ]
   },
   "chatHistory": [
     {
       "role": "user",
-      "content": "make the caption and the title size small'"
+      "content": "change the caption color to blue"
     },
     {
       "role": "system",
@@ -615,7 +215,7 @@
     },
     {
       "role": "user",
-      "content": "make them more smaller"
+      "content": "change the caption color to yellow"
     },
     {
       "role": "system",
@@ -623,23 +223,7 @@
     },
     {
       "role": "user",
-      "content": "make the caption and title more smaller"
-    },
-    {
-      "role": "system",
-      "content": "Changes applied! Preview updated."
-    },
-    {
-      "role": "user",
-      "content": "make the caption smaller"
-    },
-    {
-      "role": "system",
-      "content": "Changes applied! Preview updated."
-    },
-    {
-      "role": "user",
-      "content": "make the video title smaller"
+      "content": "add a b-roll for the 9 sec clip"
     },
     {
       "role": "system",
