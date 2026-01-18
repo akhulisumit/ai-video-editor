@@ -105,13 +105,15 @@ export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
 
       {activeSegment && (
         <Caption
-           // ... props
            text={activeSegment.text}
            start={activeSegment.start}
            end={activeSegment.end}
            isTitle={activeSegment.isTitle}
            highlight={activeSegment.highlight}
            animation={activeSegment.captionAnimation}
+           captionColor={activeSegment.captionColor}
+           captionSize={activeSegment.captionSize}
+           highlightColor={activeSegment.highlightColor}
         />
       )}
     </AbsoluteFill>

@@ -142,5 +142,47 @@ router.post(
     }
   }
 );
+import { processEditRequest } from "../services/editService.js";
+
+/* ... existing imports ... */
+
+/* ---------- EDIT ROUTE ---------- */
+
+router.post("/edit-video", async (req, res) => {
+  try {
+    const { prompt } = req.body;
+    
+    // 1. Read current sample.json
+    if (!fs.existsSync(REMOTION_SAMPLE)) {
+      return res.status(404).json({ error: "No active project found." });
+    }
+    
+    const currentData = JSON.parse(fs.readFileSync(REMOTION_SAMPLE, "utf-8"));
+    
+    console.log(`[EDIT REQUEST] "${prompt}"`);
+
+    // 2. Call AI Service
+    // We only send the editPlan part to save tokens/complexity, 
+    // but if you want to edit metadata, send the whole thing.
+    // For now, let's sending everything but focus on editPlan.
+    
+    const newEditPlan = await processEditRequest(currentData.editPlan, prompt);
+    
+    // 3. Update Data
+    currentData.editPlan = newEditPlan;
+    
+    // 4. Write back
+    fs.writeFileSync(REMOTION_SAMPLE, JSON.stringify(currentData, null, 2));
+    
+    console.log("[EDIT SUCCESS] updated sample.json");
+    
+    res.json({ status: "ok", message: "Edit applied", data: currentData });
+
+  } catch (err) {
+    console.error("EDIT ERROR:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 export default router;

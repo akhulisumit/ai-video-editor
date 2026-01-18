@@ -8,6 +8,9 @@ export const Caption = ({
   isTitle,
   highlight = [],
   animation,
+  captionColor = "white",
+  captionSize = 100,
+  highlightColor = "#fbbf24"
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -22,15 +25,14 @@ export const Caption = ({
   const localFrame = frame - startFrame;
 
   const progress = spring({
-  frame: localFrame,
-  fps,
-  config: {
-    damping: 200,
-    stiffness: 80,
-    mass: 3,
-  },
-});
-
+    frame: localFrame,
+    fps,
+    config: {
+      damping: 200,
+      stiffness: 80,
+      mass: 3,
+    },
+  });
 
   let transform = "none";
   let opacity = 1;
@@ -54,9 +56,9 @@ export const Caption = ({
         bottom: isTitle ? "40%" : "10%",
         width: "100%",
         textAlign: "center",
-        fontSize: isTitle ? 100 : 100,
+        fontSize: isTitle ? 100 : Number(captionSize), // Use prompt size or default
         fontWeight: isTitle ? "bold" : 600,
-        color: isTitle ? "#fbbf24" : "white",
+        color: isTitle ? "#fbbf24" : captionColor, // Use prompt color or default
         transform,
         opacity,
         textShadow: "0 4px 12px rgba(0,0,0,0.6)",
@@ -73,7 +75,7 @@ export const Caption = ({
           <span
             key={i}
             style={{
-              color: shouldHighlight ? "#fbbf24" : "white",
+              color: shouldHighlight ? highlightColor : "inherit", // Use prompt color
               marginRight: 8,
               display: "inline-block"
             }}

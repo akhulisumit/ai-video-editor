@@ -28,7 +28,8 @@ const LandingPage = () => {
       if (response.data.status === 'ok') {
         console.log("Backend processing complete. Redirecting to Editor...");
         setUploadStatus('Success! Redirecting...');
-        window.location.href = 'http://localhost:3002/AutoEditor';
+        // Redirect to internal Vite route
+        window.location.href = '/AutoEditor';
       }
     } catch (error) {
       console.error(error);
