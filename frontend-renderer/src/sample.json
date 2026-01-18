@@ -1,336 +1,259 @@
 {
   "video": "video.mp4",
   "audio": "audio.wav",
-  "metadata": {
-    "width": 848,
-    "height": 478,
-    "duration": 47.693356
-  },
   "editPlan": {
     "segments": [
       {
         "text": "Hello guys, welcome to my blog",
         "start": 0,
         "end": 2.293333371480306,
+        "isTitle": true,
         "highlight": [
-          "welcome"
+          "welcome",
+          "blog"
         ],
-        "captionAnimation": "POP",
-        "videoAnimation": "ZOOM_IN",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "SLIDE_UP",
+        "isSceneChange": true
       },
       {
         "text": "and in today's cozy blog, we",
         "start": 2.293333371480306,
         "end": 4.586666742960612,
+        "isTitle": false,
         "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "are going to explore the normal",
         "start": 4.586666742960612,
         "end": 6.880000114440918,
-        "highlight": [
-          "explore"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "isTitle": false,
+        "highlight": [],
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
-        "text": "hackathon at Scyllus Plottinger.",
+        "text": "hackathon at Skillz Plottingham.",
         "start": 6.880000114440918,
         "end": 9.279999732971191,
+        "isTitle": false,
         "highlight": [
           "hackathon",
-          "Scyllus Plottinger"
+          "Skillz"
         ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Event",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "POP",
+        "isSceneChange": true
       },
       {
         "text": "So as the other hackathons, we",
         "start": 9.279999732971191,
         "end": 11.279999732971191,
-        "highlight": [
-          "hackathons"
-        ],
-        "captionAnimation": "SLIDE_UP",
-        "videoAnimation": "ZOOM_OUT",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "isTitle": false,
+        "highlight": [],
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "registered that hackathon at the very",
         "start": 11.279999732971191,
         "end": 13.279999732971191,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "isTitle": false,
+        "highlight": [
+          "registered",
+          "hackathon"
+        ],
+        "animation": "POP",
+        "isSceneChange": false
       },
       {
         "text": "end moment when",
         "start": 13.279999732971191,
         "end": 14.279999732971191,
+        "isTitle": false,
         "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "their form was going to close",
         "start": 14.279999732971191,
         "end": 16.62947328467118,
-        "highlight": [
-          "close"
-        ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "isTitle": false,
+        "highlight": [],
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "and as you can see, we",
         "start": 16.62947328467118,
         "end": 18.978946836371172,
+        "isTitle": false,
         "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "three roommates are going to the hackathon.",
         "start": 18.978946836371172,
         "end": 21.719999313354492,
+        "isTitle": false,
         "highlight": [
-          "three roommates",
+          "roommates",
           "hackathon"
         ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Journey",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "POP",
+        "isSceneChange": false
       },
       {
         "text": "One of the roommates is in",
         "start": 21.719999313354492,
         "end": 23.489999771118164,
-        "highlight": [
-          "roommates"
-        ],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "isTitle": false,
+        "highlight": [],
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "the washroom.",
         "start": 23.489999771118164,
         "end": 24.079999923706055,
+        "isTitle": false,
         "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "The bus deadline is at 10pm and",
         "start": 24.079999923706055,
         "end": 26.949999968210857,
-        "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "isTitle": false,
+        "highlight": [
+          "deadline",
+          "10pm"
+        ],
+        "animation": "POP",
+        "isSceneChange": false
       },
       {
         "text": "it's 9.",
         "start": 26.949999968210857,
         "end": 27.769999980926514,
+        "isTitle": false,
         "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
-        "text": "53 right now.",
+        "text": "53pm right now.",
         "start": 27.769999980926514,
         "end": 29,
+        "isTitle": false,
         "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "We have 7 minutes to board",
         "start": 29,
         "end": 30.824000549316406,
+        "isTitle": false,
         "highlight": [
-          "7 minutes"
+          "minutes",
+          "board"
         ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Countdown",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "POP",
+        "isSceneChange": false
       },
       {
         "text": "the bus and I haven't woken",
         "start": 30.824000549316406,
         "end": 32.64800109863281,
+        "isTitle": false,
         "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "up properly yet.",
         "start": 32.64800109863281,
         "end": 33.560001373291016,
+        "isTitle": false,
         "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "So I gotta rush to the",
         "start": 33.560001373291016,
         "end": 35.53052701448139,
-        "highlight": [
-          "rush"
-        ],
-        "captionAnimation": "SLIDE_UP",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "isTitle": false,
+        "highlight": [],
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "hackathon and let's see what we",
         "start": 35.53052701448139,
         "end": 37.50105265567177,
-        "highlight": [
-          "hackathon"
-        ],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "isTitle": false,
+        "highlight": [],
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "build in these next 24 hours with",
         "start": 37.50105265567177,
         "end": 39.79999923706055,
+        "isTitle": false,
         "highlight": [
-          "build"
+          "build",
+          "hours"
         ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "POP",
+        "isSceneChange": false
       },
       {
         "text": "our sleepy eyes.",
         "start": 39.79999923706055,
         "end": 41.31999969482422,
-        "highlight": [
-          "sleepy eyes"
-        ],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "isTitle": false,
+        "highlight": [],
+        "animation": "FADE",
+        "isSceneChange": false
       },
       {
         "text": "And I am the third roommate.",
         "start": 41.31999969482422,
         "end": 43.2400016784668,
+        "isTitle": false,
         "highlight": [
-          "third roommate"
+          "third",
+          "roommate"
         ],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "POP",
+        "isSceneChange": false
       },
       {
         "text": "Sorry, third participant.",
         "start": 43.2400016784668,
         "end": 46.040000915527344,
+        "isTitle": false,
         "highlight": [
-          "Sorry"
+          "participant"
         ],
-        "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "POP",
+        "isSceneChange": false
       },
       {
         "text": "No, no, no.",
         "start": 46.040000915527344,
         "end": 47.47999954223633,
+        "isTitle": false,
         "highlight": [],
-        "captionAnimation": "NONE",
-        "videoAnimation": "NONE",
-        "sectionTitle": "The Secret",
-        "captionSize": 36,
-        "captionColor": "skyblue"
+        "animation": "FADE",
+        "isSceneChange": false
       }
     ]
-  },
-  "chatHistory": [
-    {
-      "role": "user",
-      "content": "decrease the caption size"
-    },
-    {
-      "role": "system",
-      "content": "Changes applied! Preview updated."
-    },
-    {
-      "role": "user",
-      "content": "change caption color to sky blue"
-    },
-    {
-      "role": "system",
-      "content": "Changes applied! Preview updated."
-    }
-  ]
+  }
 }

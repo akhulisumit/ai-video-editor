@@ -131,7 +131,7 @@ const EditorPage = () => {
            {/* New Controls */}
            <div className="header-actions">
               <a 
-                href="http://localhost:3002" 
+                href={`${window.location.protocol}//${window.location.hostname}:3001`} 
                 target="_blank" 
                 rel="noreferrer"
                 className="icon-btn"

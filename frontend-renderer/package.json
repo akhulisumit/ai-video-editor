@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "remotion studio",
+    "start": "remotion studio --port 3001",
     "build": "remotion render src/index.js AutoEditor out/video.mp4",
     "upgrade": "remotion upgrade",
     "web": "vite",
