@@ -2,6 +2,9 @@ import express from "express";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
+import { exec } from "child_process";
+import util from "util";
+const execPromise = util.promisify(exec);
 
 // services
 import { extractAudio } from "../services/audio.js";
@@ -161,15 +164,24 @@ router.post("/edit-video", async (req, res) => {
     
     console.log(`[EDIT REQUEST] "${prompt}"`);
 
-    // 2. Call AI Service
-    // We only send the editPlan part to save tokens/complexity, 
-    // but if you want to edit metadata, send the whole thing.
-    // For now, let's sending everything but focus on editPlan.
+    // 2. Call AI Service (Update to include chat history context)
+    // We append the new message to history first if we want context, 
+    // but for now let's just save the history after.
     
     const newEditPlan = await processEditRequest(currentData.editPlan, prompt);
     
     // 3. Update Data
     currentData.editPlan = newEditPlan;
+
+    // --- CHAT PERSISTENCE ---
+    if (!currentData.chatHistory) {
+      currentData.chatHistory = [];
+    }
+    // Add user message
+    currentData.chatHistory.push({ role: 'user', content: prompt });
+    // Add AI message
+    currentData.chatHistory.push({ role: 'system', content: 'Changes applied! Preview updated.' });
+    // ------------------------
     
     // 4. Write back
     fs.writeFileSync(REMOTION_SAMPLE, JSON.stringify(currentData, null, 2));
@@ -195,6 +207,74 @@ router.get("/project", (req, res) => {
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+});
+/* ---------- RENDER ROUTE ---------- */
+
+router.post("/render-video", async (req, res) => {
+  try {
+    console.log("[RENDER] Request received");
+
+    if (!fs.existsSync(REMOTION_SAMPLE)) {
+      return res.status(404).json({ error: "No active project found." });
+    }
+
+    const currentData = JSON.parse(fs.readFileSync(REMOTION_SAMPLE, "utf-8"));
+    
+    // 1. Create a temporal input props file for Remotion
+    // The component MyVideo needs { videoSrc, audioSrc, segments }
+    // These must match the props in your Root or the component directly.
+    const inputProps = {
+      videoSrc: currentData.video, // e.g. "video.mp4" (must be in public)
+      audioSrc: currentData.audio,
+      segments: currentData.editPlan.segments
+    };
+
+    const propsPath = path.resolve("./render-props.json");
+    fs.writeFileSync(propsPath, JSON.stringify(inputProps));
+    console.log(`[RENDER] Props written to ${propsPath}`);
+
+    // 2. Run Remotion Render Command
+    // We assume the frontend-renderer folder has 'npx remotion' available.
+    // Command: npx remotion render <entry-point> <composition-id> <output-file> --props=...
+    
+    const frontendDir = path.resolve("../frontend-renderer");
+    const outputVideoName = `out-${Date.now()}.mp4`;
+    const outputPath = path.join(frontendDir, "out", outputVideoName);
+
+    // Make sure out dir exists
+    if (!fs.existsSync(path.join(frontendDir, "out"))) {
+      fs.mkdirSync(path.join(frontendDir, "out"));
+    }
+
+    // NOTE: We need to use "src/index.js" or wherever registerRoot is. 
+    // Assuming "src/index.js" registers "MyVideo". 
+    // If your Composition ID is "MyVideo", use that.
+    
+    const command = `npx remotion render src/index.js MyVideo out/${outputVideoName} --props="${propsPath}" --overwrite`;
+    
+    console.log(`[RENDER] Executing: ${command}`);
+    
+    const { stdout, stderr } = await execPromise(command, { 
+      cwd: frontendDir,
+      maxBuffer: 1024 * 1024 * 10 
+    });
+    
+    console.log("[RENDER] Standard Output:", stdout);
+    if (stderr) console.error("[RENDER] Standard Error:", stderr);
+
+    // Cleanup props file
+    if (fs.existsSync(propsPath)) fs.unlinkSync(propsPath);
+
+    res.json({
+      status: "ok",
+      message: "Render complete",
+      videoUrl: `/out/${outputVideoName}` // You might need to serve the 'out' folder statically in frontend
+    });
+
+  } catch (err) {
+    console.error("RENDER FAILED:", err);
+    res.status(500).json({ error: "Render failed", details: err.message });
   }
 });
 

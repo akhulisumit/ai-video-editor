@@ -13,6 +13,7 @@ const EditorPage = () => {
     { role: 'system', content: 'Welcome to the AI Editor! Ask me to change captions, colors, or styles.' }
   ]);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
 
   // FETCH DATA from API instead of import
@@ -20,6 +21,9 @@ const EditorPage = () => {
     try {
       const res = await axios.get('http://localhost:3000/api/project');
       setData(res.data);
+      if (res.data.chatHistory && Array.isArray(res.data.chatHistory)) {
+        setMessages(res.data.chatHistory);
+      }
       setLoading(false);
       // Force refresh player when data changes significantly
       setRefreshKey(k => k + 1);
@@ -58,6 +62,13 @@ const EditorPage = () => {
              fetchProjectData();
         }
       }
+      
+      // Update chat history from backend if returned, otherwise we just kept local state 
+      // (but backend is source of truth for persistence)
+      if (response.data.data && response.data.data.chatHistory) {
+         setMessages(response.data.data.chatHistory);
+      }
+
     } catch (error) {
       console.error(error);
       setMessages(prev => [...prev, { role: 'error', content: 'Failed to apply changes. Try again.' }]);
@@ -72,6 +83,26 @@ const EditorPage = () => {
       handleSend();
     }
   };
+
+  const handleExport = async () => {
+    if (isExporting) return;
+    setIsExporting(true);
+    alert("Starting Render... This may take a minute.");
+    
+    try {
+      const res = await axios.post('http://localhost:3000/api/render-video');
+      if (res.data.status === 'ok') {
+        alert(`Render Complete! Saved to: ${res.data.videoUrl}`);
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Render Failed. Check server logs.");
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
+
 
   if (loading) {
     return <div className="editor-loading">Loading Editor...</div>;
@@ -162,8 +193,8 @@ const EditorPage = () => {
              <RefreshCw size={16} /> Reload Preview
            </button>
            
-           <button className="tool-btn primary" onClick={() => alert("Render triggered! (Implement Backend)")}>
-             <Download size={16} /> Export Video
+           <button className="tool-btn primary" onClick={handleExport} disabled={isExporting}>
+             <Download size={16} /> {isExporting ? "Rendering..." : "Export Video"}
            </button>
         </div>
       </div>
