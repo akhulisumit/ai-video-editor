@@ -4,7 +4,10 @@ import axios from 'axios';
 import { Upload, Video, Zap, Layers, CheckCircle } from 'lucide-react';
 import './LandingPage.css';
 
+import { useNavigate } from 'react-router-dom';
+
 const LandingPage = () => {
+  const navigate = useNavigate();
   const [isUploading, setIsUploading] = useState(false);
   const [uploadStatus, setUploadStatus] = useState('');
   
@@ -28,8 +31,8 @@ const LandingPage = () => {
       if (response.data.status === 'ok') {
         console.log("Backend processing complete. Redirecting to Editor...");
         setUploadStatus('Success! Redirecting...');
-        // Redirect to internal Vite route
-        window.location.href = '/AutoEditor';
+        // Smooth SPA Redirect
+        navigate('/AutoEditor');
       }
     } catch (error) {
       console.error(error);

@@ -184,5 +184,18 @@ router.post("/edit-video", async (req, res) => {
   }
 });
 
+/* ---------- PROJECT DATA ROUTE ---------- */
+
+router.get("/project", (req, res) => {
+  try {
+    if (!fs.existsSync(REMOTION_SAMPLE)) {
+      return res.status(404).json({ error: "No active project found." });
+    }
+    const data = JSON.parse(fs.readFileSync(REMOTION_SAMPLE, "utf-8"));
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 export default router;

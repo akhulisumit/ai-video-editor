@@ -1,22 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Player } from '@remotion/player';
 import axios from 'axios';
-import { Send, Settings, Sparkles, RefreshCw } from 'lucide-react';
+import { Send, Sparkles, RefreshCw, ExternalLink, Download } from 'lucide-react';
 import { MyVideo } from './VideoComposition';
 import './EditorPage.css';
 
-// Default dimensions
-const VIDEO_WIDTH = 1920; // Or dynamic from metadata
-const VIDEO_HEIGHT = 1080;
-
 const EditorPage = () => {
-  // Load initial data from sample.json (assuming it's available via import or fetch)
-  // Since we are in Vite context, reading local file dynamically is tricky without backend.
-  // We will assume the processing backend wrote to src/sample.json which Vite handles, 
-  // BUT Vite HMR might be needed. 
-  // Better approach: Fetch from backend API or direct import if acceptable.
-  // For now, let's try direct import with a key to force re-render.
-  
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [prompt, setPrompt] = useState('');
@@ -26,21 +15,23 @@ const EditorPage = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
 
-  // Initial Data Load (Simulated via dynamic import or direct)
-  useEffect(() => {
-    // In a real app, we'd fetch from an API like GET /api/project
-    // Here we can rely on the dynamic import of the JSON we already have in src
-    import('./sample.json?t=' + Date.now()) // Bust cache
-      .then((module) => {
-        setData(module.default);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error("Failed to load project", err);
-        setLoading(false);
-      });
-  }, [refreshKey]);
+  // FETCH DATA from API instead of import
+  const fetchProjectData = async () => {
+    try {
+      const res = await axios.get('http://localhost:3000/api/project');
+      setData(res.data);
+      setLoading(false);
+      // Force refresh player when data changes significantly
+      setRefreshKey(k => k + 1);
+    } catch (err) {
+      console.error("Failed to load project:", err);
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
+    fetchProjectData();
+  }, []);
 
   const handleSend = async () => {
     if (!prompt.trim() || isProcessing) return;
@@ -59,13 +50,12 @@ const EditorPage = () => {
         const aiMessage = { role: 'system', content: 'Changes applied! Preview updated.' };
         setMessages(prev => [...prev, aiMessage]);
         
-        // Update local state with new data
-        // We received the full data object back from backend (if we modify endpoint to return it)
-        // Or re-fetch.
+        // Re-fetch data to update player WITHOUT reloading page
         if (response.data.data) {
              setData(response.data.data);
-             // Force player re-mount if needed, though props change should handle it
              setRefreshKey(prev => prev + 1);
+        } else {
+             fetchProjectData();
         }
       }
     } catch (error) {
@@ -83,8 +73,12 @@ const EditorPage = () => {
     }
   };
 
-  if (loading || !data) {
+  if (loading) {
     return <div className="editor-loading">Loading Editor...</div>;
+  }
+
+  if (!data) {
+    return <div className="editor-loading">No Project Found. Please upload a video first.</div>;
   }
 
   // Calculate duration
@@ -98,8 +92,23 @@ const EditorPage = () => {
       {/* LEFT: Chat & Controls */}
       <div className="editor-sidebar">
         <div className="sidebar-header">
-           <Sparkles className="icon-purple" />
-           <h2>AI Assistant</h2>
+           <div className="header-left">
+             <Sparkles className="icon-purple" />
+             <h2>AI Assistant</h2>
+           </div>
+           
+           {/* New Controls */}
+           <div className="header-actions">
+              <a 
+                href="http://localhost:3002" 
+                target="_blank" 
+                rel="noreferrer"
+                className="icon-btn"
+                title="Open Advanced Timeline"
+              >
+                <ExternalLink size={18} />
+              </a>
+           </div>
         </div>
 
         <div className="chat-history">
@@ -116,7 +125,7 @@ const EditorPage = () => {
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="e.g. 'Make the captions yellow and bigger'"
+            placeholder="e.g. 'Make the captions yellow'"
           />
           <button onClick={handleSend} disabled={isProcessing}>
             <Send size={20} />
@@ -136,10 +145,9 @@ const EditorPage = () => {
             fps={30}
             controls
             inputProps={{
-              videoSrc: "/video.mp4", // Served from Public
-              audioSrc: "/audio.wav", // Served from Public
+              videoSrc: "/video.mp4",
+              audioSrc: "/audio.wav",
               segments: data.editPlan?.segments || [],
-              // Add any new global styles here if we move them to root Props
             }}
             style={{
               width: '100%',
@@ -148,11 +156,15 @@ const EditorPage = () => {
             }}
           />
         </div>
+        
         <div className="editor-toolbar">
-           <button className="tool-btn" onClick={() => setRefreshKey(k => k+1)}>
+           <button className="tool-btn" onClick={fetchProjectData}>
              <RefreshCw size={16} /> Reload Preview
            </button>
-           {/* Add Export button later */}
+           
+           <button className="tool-btn primary" onClick={() => alert("Render triggered! (Implement Backend)")}>
+             <Download size={16} /> Export Video
+           </button>
         </div>
       </div>
     </div>

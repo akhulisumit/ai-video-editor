@@ -1,0 +1,269 @@
+{
+  "video": "video.mp4",
+  "audio": "audio.wav",
+  "metadata": {
+    "width": 848,
+    "height": 478,
+    "duration": 47.693356
+  },
+  "editPlan": {
+    "segments": [
+      {
+        "text": "Hello guys, welcome to my blog",
+        "start": 0,
+        "end": 2.293333371480306,
+        "highlight": [
+          "welcome"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "ZOOM_IN",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "and in today's cozy blog, we",
+        "start": 2.293333371480306,
+        "end": 4.586666742960612,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "are going to explore the normal",
+        "start": 4.586666742960612,
+        "end": 6.880000114440918,
+        "highlight": [
+          "explore"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "hackathon at Skillz Plottingham.",
+        "start": 6.880000114440918,
+        "end": 9.279999732971191,
+        "highlight": [
+          "hackathon",
+          "Skillz Plottingham"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Event"
+      },
+      {
+        "text": "So as the other hackathons, we",
+        "start": 9.279999732971191,
+        "end": 11.279999732971191,
+        "highlight": [
+          "hackathons"
+        ],
+        "captionAnimation": "SLIDE_UP",
+        "videoAnimation": "ZOOM_OUT",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "registered that hackathon at the very",
+        "start": 11.279999732971191,
+        "end": 13.279999732971191,
+        "highlight": [
+          "registered",
+          "hackathon"
+        ],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "end moment when",
+        "start": 13.279999732971191,
+        "end": 14.279999732971191,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "their form was going to close",
+        "start": 14.279999732971191,
+        "end": 16.62947328467118,
+        "highlight": [
+          "close"
+        ],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "and as you can see, we",
+        "start": 16.62947328467118,
+        "end": 18.978946836371172,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "three roommates are going to the hackathon.",
+        "start": 18.978946836371172,
+        "end": 21.719999313354492,
+        "highlight": [
+          "three roommates",
+          "hackathon"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Journey"
+      },
+      {
+        "text": "One of the roommates is in",
+        "start": 21.719999313354492,
+        "end": 23.489999771118164,
+        "highlight": [
+          "roommates"
+        ],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "the washroom.",
+        "start": 23.489999771118164,
+        "end": 24.079999923706055,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "The bus deadline is at 10pm and",
+        "start": 24.079999923706055,
+        "end": 26.949999968210857,
+        "highlight": [
+          "deadline"
+        ],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "it's 9.",
+        "start": 26.949999968210857,
+        "end": 27.769999980926514,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "53pm right now.",
+        "start": 27.769999980926514,
+        "end": 29,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "We have 7 minutes to board",
+        "start": 29,
+        "end": 30.824000549316406,
+        "highlight": [
+          "7 minutes"
+        ],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "the bus and I haven't woken",
+        "start": 30.824000549316406,
+        "end": 32.64800109863281,
+        "highlight": [
+          "woken"
+        ],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "up properly yet.",
+        "start": 32.64800109863281,
+        "end": 33.560001373291016,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "So I gotta rush to the",
+        "start": 33.560001373291016,
+        "end": 35.53052701448139,
+        "highlight": [
+          "rush"
+        ],
+        "captionAnimation": "SLIDE_UP",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "hackathon and let's see what we",
+        "start": 35.53052701448139,
+        "end": 37.50105265567177,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "build in these next 24 hours with",
+        "start": 37.50105265567177,
+        "end": 39.79999923706055,
+        "highlight": [
+          "build"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "our sleepy eyes.",
+        "start": 39.79999923706055,
+        "end": 41.31999969482422,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "And I am the third roommate.",
+        "start": 41.31999969482422,
+        "end": 43.2400016784668,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "Sorry, third participant.",
+        "start": 43.2400016784668,
+        "end": 46.040000915527344,
+        "highlight": [
+          "Sorry"
+        ],
+        "captionAnimation": "FADE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      },
+      {
+        "text": "No, no, no.",
+        "start": 46.040000915527344,
+        "end": 47.47999954223633,
+        "highlight": [],
+        "captionAnimation": "NONE",
+        "videoAnimation": "NONE",
+        "sectionTitle": "The Secret"
+      }
+    ]
+  }
+}
