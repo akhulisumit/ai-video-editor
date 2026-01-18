@@ -16,6 +16,7 @@ Each segment has:
 - captionAnimation: "FADE", "POP", "SLIDE_UP", "NONE"
 - videoAnimation: "ZOOM_IN", "ZOOM_OUT", "SLIDE_UP", "SLIDE_LEFT", "NONE"
 - sectionTitle: A short string displayed in the corner
+- sectionTitleSize: (Optional) Font size in px (e.g., 60, 80, 100)
 - captionColor: (Optional) Hex code or color name for text
 - captionSize: (Optional) Font size in px (e.g., 40, 60)
 - highlightColor: (Optional) Hex code for active word

@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
 
-export const SectionTitle = ({ title }) => {
+export const SectionTitle = ({ title, size = 80 }) => {
   if (!title) return null;
 
   return (
@@ -15,7 +15,7 @@ export const SectionTitle = ({ title }) => {
         padding: "20px 40px",
         borderRadius: "20px",
         fontFamily: "sans-serif",
-        fontSize: 80,
+        fontSize: Number(size),
         fontWeight: "bold",
         textTransform: "uppercase",
         letterSpacing: "4px",

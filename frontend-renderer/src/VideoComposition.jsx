@@ -36,6 +36,7 @@ export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
     );
     
   const currentSectionTitle = activeTitleSegment ? activeTitleSegment.sectionTitle : null;
+  const currentSectionTitleSize = activeTitleSegment ? activeTitleSegment.sectionTitleSize : 80;
 
   /* ---------- VIDEO STYLE ---------- */
 
@@ -101,7 +102,7 @@ export const MyVideo = ({ videoSrc, audioSrc, segments }) => {
       {audioSrc && <Audio src={staticFile(audioSrc)} />}
       
       {/* Section Title Overlay */}
-      <SectionTitle title={currentSectionTitle} />
+      <SectionTitle title={currentSectionTitle} size={currentSectionTitleSize} />
 
       {activeSegment && (
         <Caption
