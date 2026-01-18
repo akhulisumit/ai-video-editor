@@ -24,7 +24,7 @@
         "start": 2.7257143429347446,
         "end": 5.451428685869489,
         "highlight": [
-          "really well"
+          "Scalar"
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "NONE",
@@ -34,10 +34,8 @@
         "text": "School of",
         "start": 5.451428685869489,
         "end": 6.360000133514404,
-        "highlight": [
-          "School"
-        ],
-        "captionAnimation": "FADE",
+        "highlight": [],
+        "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
       },
@@ -46,12 +44,11 @@
         "start": 6.360000133514404,
         "end": 8.556923095996563,
         "highlight": [
-          "Technology's",
-          "entrance process"
+          "Technology's entrance"
         ],
-        "captionAnimation": "NONE",
+        "captionAnimation": "FADE",
         "videoAnimation": "NONE",
-        "sectionTitle": "The Secret"
+        "sectionTitle": "The Process"
       },
       {
         "text": "entrance exams that you might be giving.",
@@ -60,9 +57,9 @@
         "highlight": [
           "entrance exams"
         ],
-        "captionAnimation": "FADE",
+        "captionAnimation": "SLIDE_UP",
         "videoAnimation": "NONE",
-        "sectionTitle": "The Challenge"
+        "sectionTitle": "The Secret"
       },
       {
         "text": "Now as you know that we",
@@ -87,8 +84,7 @@
         "start": 14.903529054978314,
         "end": 16.479999542236328,
         "highlight": [
-          "2026",
-          "batch"
+          "2026 batch"
         ],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
@@ -109,7 +105,9 @@
         "text": "process, be it the video essay,",
         "start": 18.729999542236328,
         "end": 20.979999542236328,
-        "highlight": [],
+        "highlight": [
+          "process"
+        ],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
@@ -168,10 +166,11 @@
         "start": 29.399999618530273,
         "end": 31.246154344998875,
         "highlight": [
-          "this video today"
+          "this video",
+          "going"
         ],
         "captionAnimation": "FADE",
-        "videoAnimation": "NONE",
+        "videoAnimation": "SLIDE_UP",
         "sectionTitle": "The Secret"
       },
       {

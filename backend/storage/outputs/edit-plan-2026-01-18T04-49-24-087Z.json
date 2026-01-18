@@ -24,7 +24,7 @@
         "start": 2.7257143429347446,
         "end": 5.451428685869489,
         "highlight": [
-          "really well"
+          "Scalar"
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "NONE",
@@ -37,7 +37,7 @@
         "highlight": [
           "School"
         ],
-        "captionAnimation": "FADE",
+        "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
       },
@@ -47,9 +47,9 @@
         "end": 8.556923095996563,
         "highlight": [
           "Technology's",
-          "entrance process"
+          "entrance"
         ],
-        "captionAnimation": "NONE",
+        "captionAnimation": "FADE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
       },
@@ -62,7 +62,7 @@
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "NONE",
-        "sectionTitle": "The Challenge"
+        "sectionTitle": "The Secret"
       },
       {
         "text": "Now as you know that we",
@@ -86,10 +86,7 @@
         "text": "2026 batch and we have",
         "start": 14.903529054978314,
         "end": 16.479999542236328,
-        "highlight": [
-          "2026",
-          "batch"
-        ],
+        "highlight": [],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
@@ -126,36 +123,36 @@
         "sectionTitle": "The Secret"
       },
       {
-        "text": "or the NSET difficulty level.",
+        "text": "or the NSET difficulty level and",
         "start": 22.479999542236328,
-        "end": 25,
+        "end": 24.386666615804035,
         "highlight": [],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
       },
       {
-        "text": "And in fact, like recently we",
-        "start": 25,
-        "end": 26.552941041834213,
+        "text": "in fact like recently we had",
+        "start": 24.386666615804035,
+        "end": 26.293333689371742,
         "highlight": [],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
       },
       {
-        "text": "had done some AMAs in which",
-        "start": 26.552941041834213,
-        "end": 28.105882083668426,
+        "text": "done some AMAs in which we",
+        "start": 26.293333689371742,
+        "end": 28.20000076293945,
         "highlight": [],
         "captionAnimation": "NONE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
       },
       {
-        "text": "we got some common questions.",
-        "start": 28.105882083668426,
-        "end": 29.39999961853027,
+        "text": "got some common questions.",
+        "start": 28.200000762939453,
+        "end": 29.399999618530273,
         "highlight": [
           "common questions"
         ],
@@ -166,9 +163,10 @@
       {
         "text": "So this video today is going",
         "start": 29.399999618530273,
-        "end": 31.246154344998875,
+        "end": 31.39384651184082,
         "highlight": [
-          "this video today"
+          "video",
+          "today"
         ],
         "captionAnimation": "FADE",
         "videoAnimation": "NONE",
@@ -176,10 +174,13 @@
       },
       {
         "text": "to clarify a lot on those changes.",
-        "start": 31.246154344998875,
-        "end": 33.400001525878906,
-        "highlight": [],
-        "captionAnimation": "NONE",
+        "start": 31.39384651184082,
+        "end": 33.720001220703125,
+        "highlight": [
+          "clarify",
+          "changes"
+        ],
+        "captionAnimation": "FADE",
         "videoAnimation": "NONE",
         "sectionTitle": "The Secret"
       }

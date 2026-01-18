@@ -47,25 +47,36 @@ router.post(
       const videoPath = req.file.path;
 
       /* STEP 0 — METADATA */
+      console.log("--- [START] Processing Video ---");
+      console.log(`[1/8] File received: ${videoPath}`);
       const metadata = await getVideoMetadata(videoPath);
-      console.log("Video Metadata:", metadata);
+      console.log("[1/8] Metadata extracted:", metadata);
 
       /* STEP 1 — AUDIO */
+      console.log("[2/8] Extracting audio...");
       const audioPath = await extractAudio(videoPath);
+      console.log(`[2/8] Audio extracted to: ${audioPath}`);
 
       /* STEP 2 — TRANSCRIPT */
+      console.log("[3/8] Transcribing audio (this may take a moment)...");
       const transcript = await transcribeAudio(audioPath);
+      console.log("[3/8] Transcription complete.");
 
       /* STEP 3 — SEGMENT */
+      console.log("[4/8] Segmenting transcript...");
       let segments = segmentTranscript(transcript);
       segments = cleanSegments(segments);
+      console.log(`[4/8] Created ${segments.length} segments.`);
 
       /* STEP 4 — AI VISUALS */
+      console.log("[5/8] Applying AI visual decisions...");
       segments = await applyVisualDecisions(segments);
+      console.log("[5/8] Visual decisions applied.");
 
       const editPlan = { segments };
 
       /* STEP 5 — COPY FILES FOR REMOTION */
+      console.log("[6/8] Setting up Remotion environment...");
 
       if (!fs.existsSync(REMOTION_PUBLIC)) {
         fs.mkdirSync(REMOTION_PUBLIC, { recursive: true });
@@ -84,8 +95,10 @@ router.post(
         audioPath,
         path.join(REMOTION_PUBLIC, audioFileName)
       );
+      console.log("[6/8] Files copied to public folder.");
 
       /* STEP 6 — WRITE sample.json */
+      console.log("[7/8] Generating 'sample.json'...");
 
       const remotionPayload = {
         video: videoFileName,
@@ -98,6 +111,7 @@ router.post(
         REMOTION_SAMPLE,
         JSON.stringify(remotionPayload, null, 2)
       );
+      console.log(`[7/8] written to ${REMOTION_SAMPLE}`);
 
       /* STEP 7 — SAVE HISTORY */
       const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
@@ -107,8 +121,10 @@ router.post(
         historyPath, 
         JSON.stringify(remotionPayload, null, 2)
       );
+      console.log(`[8/8] History saved to ${historyPath}`);
 
       /* RESPONSE TO POSTMAN */
+      console.log("--- [DONE] Sending response to client ---");
 
       res.json({
         status: "ok",

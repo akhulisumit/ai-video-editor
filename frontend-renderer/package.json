@@ -6,16 +6,23 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "remotion studio",
     "build": "remotion render src/index.js AutoEditor out/video.mp4",
-    "upgrade": "remotion upgrade"
+    "upgrade": "remotion upgrade",
+    "web": "vite",
+    "build:web": "vite build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.17.13",
+    "@vitejs/plugin-react": "^5.1.2",
+    "axios": "^1.13.2",
+    "lucide-react": "^0.562.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "remotion": "^4.0.407"
+    "remotion": "^4.0.407",
+    "vite": "^7.3.1"
   },
   "devDependencies": {
     "@remotion/cli": "^4.0.407"
